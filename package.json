@@ -1,23 +1,23 @@
 {
-    "name": "test-app",
-    "description": "test app",
-    "version": "0.0.1",
-    "main": "src/app.js",
-    "author": {
-      "name": "kruhol",
-      "email": "n.kruhol@gmail.com"
-    },
-    "private": true,
-    "engines": {
-      "node": "9.x",
-      "npm": "5.x"
-    },
-    "scripts": {
-      "start": "webpack-dev-server",
-      "build": "webpack",
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "devDependencies": {
+  "name": "test-app",
+  "description": "",
+  "version": "0.0.1",
+  "main": "src/app.js",
+  "author": {
+    "name": "kruhol",
+    "email": "n.kruhol@gmail.com"
+  },
+  "private": true,
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open --hot",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
     "dotenv": "^5.0.1",
@@ -31,17 +31,16 @@
     "webpack": "^3.11.0",
     "webpack-cli": "^2.0.9",
     "webpack-dev-server": "^2.11.2",
-    "uglifyjs-webpack-plugin": "^1.2.3"
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+
   },
-    "dependencies": {
-      "@uirouter/angularjs": "^1.0.15",
-      "angular": "^1.6.9",
-      "bootstrap": "^4.0.0",
-      "font-awesome": "^4.7.0",
-      "jquery": "^3.3.1",
-      "ngstorage": "^0.3.11",
-      "nprogress": "^0.2.0",
-      "popper.js": "^1.12.9"
-    }
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
+    "angular": "^1.6.9",
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "ngstorage": "^0.3.11"
   }
-  
+}
