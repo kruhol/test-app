@@ -3,25 +3,12 @@ var angular = require('angular');
 
 require('../css/home.css')
 
-function homeCtrl(statements) {
+function homeCtrl(availableForms) {
   var self = angular.extend(this, {
     title: 'Test App',
-    availableForms: [
-      {
-        formName: 'first',
-        required: true
-      }, {
-        formName: 'second',
-        required: false
-      }, {
-        formName: 'third',
-        required: false
-      }
-    ],
+    availableForms: availableForms,
     selectedForms: []
   });
-
-  console.log(123, statements);
 }
 
 var stateConfig = {
@@ -31,9 +18,23 @@ var stateConfig = {
   controller: 'homeCtrl',
   controllerAs: '$ctrl',
   resolve: {
-    statements: ['$q', function($q) {
-      console.log(92929292929299);
-      return ['gggggggggg', 'ffffffff']
+    availableForms: ['FormSvc', function(FormSvc) {
+      FormSvc.getEvailableForms()
+        .then(res => {
+          console.log('res - ', res)
+        });
+      return [
+        {
+          formName: 'first',
+          required: true
+        }, {
+          formName: 'second',
+          required: false
+        }, {
+          formName: 'third',
+          required: false
+        }
+      ]
     }]
   }
 };
@@ -45,8 +46,8 @@ function routeConfig($stateProvider) {
   $stateProvider.state(stateConfig)
 }
 
-angular.module('home', ['components'])
-  .controller('homeCtrl', ['statements', homeCtrl])
+angular.module('home', ['components', 'services'])
+  .controller('homeCtrl', ['availableForms', homeCtrl])
   .config([ '$stateProvider', routeConfig ])
 
 module.exports = stateConfig;

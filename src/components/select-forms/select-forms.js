@@ -37,18 +37,3 @@ function appSelectCtrl($scope) {
     self.ngModel.splice(self.ngModel.indexOf(item), 1);
   }
 }
-
-
-
-
-{/* <select-form
-
-ng-model=”selectedForms”
-
-forms=”availableForms”>
-
-</select-form>
-
-
-
-availableForms: <{ formName: string,  required: boolean }>[] */}
