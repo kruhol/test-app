@@ -20,7 +20,7 @@
     </div>
     <div>
         <button class="btn btn-success test-btn"
-                ng-click="$ctrl.addItem({item: $ctrl.selectedItem}); $ctrl.skeep()"
+                ng-click="$ctrl.addItem({item: $ctrl.selectedItem}); $ctrl.resetSelectedItem()"
                 ng-if="!$ctrl.isUsed && $ctrl.selectedItem">Add</button>
         <button class="btn btn-danger test-btn"
                 ng-click="$ctrl.removeItem({item: $ctrl.selectedItem})"

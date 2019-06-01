@@ -1,5 +1,5 @@
 import {IComponentController} from 'angular';
-import IForm from '../../interfaces/form';
+import IForm from '../../interfaces/form.interface';
 
 class SelectFormsComponentController implements IComponentController {
     public ngModel: IForm[];

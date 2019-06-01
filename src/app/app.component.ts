@@ -1,9 +1,11 @@
 import {IComponentOptions} from 'angular';
 
-const AppComponent: IComponentOptions = {
-    template: `
-        <div class="app app--animate" loader-directive ui-view></div>
-    `
-};
+class AppComponent implements IComponentOptions {
+    public template: string;
+
+    constructor() {
+        this.template = '<div ui-view></div>'
+    }
+}
 
 export default AppComponent;

@@ -1,5 +1,5 @@
 import {IComponentController} from 'angular';
-import IForm from '../../interfaces/form';
+import IForm from '../../interfaces/form.interface';
 
 class AppSelectComponentController implements IComponentController {
     public selectedItem: IForm;
@@ -14,7 +14,7 @@ class AppSelectComponentController implements IComponentController {
         this.selectedItem = item;
     }
 
-    skeep(): void {
+    resetSelectedItem(): void {
         this.selectedItem = null;
     }
 }

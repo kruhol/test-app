@@ -4,7 +4,7 @@ import {IStateProvider, IUrlRouterProvider} from 'angular-ui-router';
 import HomeComponent from './home.component';
 import Components from '../components/components.module';
 import './home.css';
-import IForm from '../interfaces/form';
+import IForm from '../interfaces/form.interface';
 import ServicesModule from '../services/form-service';
 
 const HomeModule: IModule = angular
