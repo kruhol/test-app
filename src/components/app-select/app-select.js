@@ -1,25 +1,25 @@
 'use strict'
+
 var angular = require('angular');
 
-angular.module('components')
-  .component('appSelect', {
-    bindings: {
-      selectedItem: '<',
-      isUsed: '<?',
-      forms: '<',
-      addItem: '&',
-      removeItem: '&'
-    },
-    controller: ['$scope', appSelectCtrl],
-    controllerAs: '$ctrl',
-    templateUrl: require('./app-select.html')
-  })
+const appSelectConfig = {
+  bindings: {
+    selectedItem: '<',
+    isUsed: '<?',
+    forms: '<',
+    addItem: '&',
+    removeItem: '&'
+  },
+  controller: appSelectCtrl,
+  controllerAs: '$ctrl',
+  templateUrl: require('./app-select.html')
+};
 
-function appSelectCtrl($scope) {
+function appSelectCtrl() {
   var self = angular.extend(this, {
     onClick: onClick,
     skeep: skeep
-  })
+  });
 
   function onClick(item) {
     self.selectedItem = item;
@@ -29,3 +29,6 @@ function appSelectCtrl($scope) {
     self.selectedItem = null;
   }
 }
+
+angular.module('components')
+  .component('appSelect', appSelectConfig);

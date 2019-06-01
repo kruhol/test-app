@@ -1,10 +1,11 @@
 'use strict';
+
 var angular = require('angular');
 
 require('../css/home.css')
 
 function homeCtrl(availableForms) {
-  var self = angular.extend(this, {
+  angular.extend(this, {
     title: 'Test App',
     availableForms: availableForms,
     selectedForms: []
@@ -24,15 +25,17 @@ var stateConfig = {
   }
 };
 
-homeCtrl.$inject = [
-]
+const homeCtrlConfig = [
+  'availableForms',
+  homeCtrl
+];
 
 function routeConfig($stateProvider) {
   $stateProvider.state(stateConfig)
 }
 
 angular.module('home', ['components', 'services'])
-  .controller('homeCtrl', ['availableForms', homeCtrl])
-  .config([ '$stateProvider', routeConfig ])
+  .controller('homeCtrl', homeCtrlConfig)
+  .config(['$stateProvider', routeConfig]);
 
 module.exports = stateConfig;

@@ -4,7 +4,7 @@
       "formName": "Gleamink"
     },
     {
-      "required": true,
+      "required": false,
       "formName": "Realysis"
     },
     {
@@ -32,7 +32,7 @@
       "formName": "Rocklogic"
     },
     {
-      "required": true,
+      "required": false,
       "formName": "Dadabase"
     },
     {
