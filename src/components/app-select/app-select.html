@@ -1,0 +1,29 @@
+<div>
+  <br/>
+  <div class="btn-group dropdown-width custom-dropdown">
+    <div class="btn border-secondary"
+         ng-disabled="$ctrl.isUsed && $ctrl.selectedItem.required">{{$ctrl.selectedItem.formName || 'Choose form'}}</div>
+    <button type="button"
+            class="dropdown-toggle dropdown-toggle-split btn-toggle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ng-disabled="$ctrl.isUsed && $ctrl.selectedItem.required">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+
+    <div class="custom-dropdown-menu">
+        <div class="dropdown-menu">
+          <div class="dropdown-item" ng-repeat="item in $ctrl.forms" ng-click="$ctrl.onClick(item)">{{item.formName}}</div>
+        </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-success custom-btn"
+            ng-click="$ctrl.addItem({item: $ctrl.selectedItem}); $ctrl.skeep()"
+            ng-if="!$ctrl.isUsed && $ctrl.selectedItem">Add</button>
+    <button class="btn btn-danger custom-btn"
+            ng-click="$ctrl.removeItem({item: $ctrl.selectedItem})"
+            ng-if="!$ctrl.selectedItem.required && $ctrl.isUsed && $ctrl.selectedItem">Delete</button>
+  </div>
+</div>

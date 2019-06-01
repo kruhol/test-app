@@ -3,64 +3,50 @@ var angular = require('angular');
 
 require('../css/home.css')
 
-function homeCtrl($scope, $sessionStorage, $state, $filter, LoginSvc) {
-  $scope.title = 'test-app';
-  $scope.navBar = require('../includes/navbar.html')
-  $scope.links = $state.get()
-    .filter(x => x.name.startsWith('home.'))
-    .map(x => {
-      return {
-        title: x.url.slice(1),
-        link: $state.href(x.name)
+function homeCtrl(statements) {
+  var self = angular.extend(this, {
+    title: 'Test App',
+    availableForms: [
+      {
+        formName: 'first',
+        required: true
+      }, {
+        formName: 'second',
+        required: false
+      }, {
+        formName: 'third',
+        required: false
       }
-    });
-  $scope.tableData = [
-    ['#', 'Header', 'Header', 'Header', 'Header' ],
-    ["1001","Lorem","ipsum","dolor","sit"],
-    ["1002","amet","consectetur","adipiscing","elit"],
-    ["1003","Integer","nec","odio","Praesent"],
-    ["1003","libero","Sed","cursus","ante"],
-    ["1004","dapibus","diam","Sed","nisi"],
-    ["1005","Nulla","quis","sem","at"],
-    ["1006","nibh","elementum","imperdiet","Duis"],
-    ["1007","sagittis","ipsum","Praesent","mauris"],
-    ["1008","Fusce","nec","tellus","sed"],
-    ["1009","augue","semper","porta","Mauris"],
-    ["1010","massa","Vestibulum","lacinia","arcu"],
-    ["1011","eget","nulla","Class","aptent"],
-    ["1012","taciti","sociosqu","ad","litora"],
-    ["1013","torquent","per","conubia","nostra"]
-  ]
+    ],
+    selectedForms: []
+  });
 
-  $scope.signout = signout;
-
-  function signout(){
-    LoginSvc.logout()
-    $state.go('login')
-  }
-
+  console.log(123, statements);
 }
 
 var stateConfig = {
   name: 'home',
   url: '/home',
   templateUrl: require('./home.html'),
-  controller: 'homeCtrl'
+  controller: 'homeCtrl',
+  controllerAs: '$ctrl',
+  resolve: {
+    statements: ['$q', function($q) {
+      console.log(92929292929299);
+      return ['gggggggggg', 'ffffffff']
+    }]
+  }
 };
 
 homeCtrl.$inject = [
-  '$scope',
-  '$sessionStorage',
-  '$state',
-  '$filter'
 ]
 
 function routeConfig($stateProvider) {
   $stateProvider.state(stateConfig)
 }
 
-angular.module('app')
-  .controller('homeCtrl', homeCtrl)
+angular.module('home', ['components'])
+  .controller('homeCtrl', ['statements', homeCtrl])
   .config([ '$stateProvider', routeConfig ])
 
 module.exports = stateConfig;

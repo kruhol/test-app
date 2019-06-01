@@ -1,0 +1,12 @@
+<div>
+  <app-select ng-repeat="item in $ctrl.ngModel"
+              selected-item="item"
+              forms="$ctrl.forms"
+              is-used="true"
+              remove-item="$ctrl.removeItem(item)">
+  </app-select>
+  <app-select forms="$ctrl.forms"
+              add-item="$ctrl.addItem(item)"
+              remove-item="$ctrl.removeItem(item)"></app-select>
+    
+</div>
