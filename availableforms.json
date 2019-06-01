@@ -1,0 +1,62 @@
+[
+    {
+      "required": false,
+      "formName": "Gleamink"
+    },
+    {
+      "required": true,
+      "formName": "Realysis"
+    },
+    {
+      "required": true,
+      "formName": "Vertide"
+    },
+    {
+      "required": false,
+      "formName": "Farmex"
+    },
+    {
+      "required": false,
+      "formName": "Colaire"
+    },
+    {
+      "required": false,
+      "formName": "Iplax"
+    },
+    {
+      "required": true,
+      "formName": "Magnemo"
+    },
+    {
+      "required": false,
+      "formName": "Rocklogic"
+    },
+    {
+      "required": true,
+      "formName": "Dadabase"
+    },
+    {
+      "required": false,
+      "formName": "Zentix"
+    },
+    {
+      "required": false,
+      "formName": "Ginkogene"
+    },
+    {
+      "required": true,
+      "formName": "Bullzone"
+    },
+    {
+      "required": false,
+      "formName": "Cubicide"
+    },
+    {
+      "required": false,
+      "formName": "Comcubine"
+    },
+    {
+      "required": false,
+      "formName": "Biospan"
+    }
+  ]

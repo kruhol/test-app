@@ -19,22 +19,7 @@ var stateConfig = {
   controllerAs: '$ctrl',
   resolve: {
     availableForms: ['FormSvc', function(FormSvc) {
-      FormSvc.getEvailableForms()
-        .then(res => {
-          console.log('res - ', res)
-        });
-      return [
-        {
-          formName: 'first',
-          required: true
-        }, {
-          formName: 'second',
-          required: false
-        }, {
-          formName: 'third',
-          required: false
-        }
-      ]
+      return FormSvc.getEvailableForms();
     }]
   }
 };

@@ -1,13 +1,21 @@
 'use strict';
 var angular = require('angular');
 
-angular.module('services', [])
-    .service('FormSvc', ['$http', function($http) {
-        var self = angular.extend(this, {
-            getEvailableForms: getEvailableForms
-        })
+function FormSvc($http) {
+  angular.extend(this, {
+    getEvailableForms: getEvailableForms
+  })
 
-        function getEvailableForms() {
-            return $http.get('availableforms');
-        }
-    }])
+  function getEvailableForms() {
+    return $http.get('availableforms.json')
+      .then(res => res.data)
+  }
+}
+
+const formSvcConfig = [
+  '$http',
+  FormSvc
+]
+
+angular.module('services', [])
+  .service('FormSvc', formSvcConfig);

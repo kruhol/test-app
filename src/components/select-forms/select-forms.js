@@ -19,11 +19,11 @@ function appSelectCtrl($scope) {
   })
 
   function $onInit() {
-    self.forms.forEach(f => {
-      if (f.required) {
-        self.ngModel.push(f);
-        self.forms.splice(self.forms.indexOf(f), 1);
-      }
+    let requiredForms = self.forms.filter(f => f.required);
+
+    requiredForms.forEach(f => {
+      self.ngModel.push(f);
+      self.forms.splice(self.forms.indexOf(f), 1);
     })
   }
 

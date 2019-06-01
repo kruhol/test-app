@@ -15,21 +15,21 @@
     width: 100%;
 }
 
-.custom-dropdown .dropdown-menu {
+.test-dropdown .dropdown-menu {
     width: 300px;
 }
 
-.custom-dropdown .custom-dropdown-menu {
+.test-dropdown .test-dropdown-menu {
     position: absolute;
     left: -250px;
 }
 
-.custom-btn {
+.test-btn {
     margin-top: 5px;
     width: 75px;
 }
 
-.custom-dropdown div[disabled],
-.custom-dropdown button[disabled] {
+.test-dropdown div[disabled],
+.test-dropdown button[disabled] {
     background-color: rgb(221, 221, 221);;
 }
