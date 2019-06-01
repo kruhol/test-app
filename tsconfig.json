@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "outDir": "./dist",
+      "target": "es6",
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "types": [
+        "angular"
+      ],
+      "allowJs": true
+    },
+    "include": [
+      "./src/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }

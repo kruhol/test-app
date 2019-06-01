@@ -18,6 +18,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/angular": "^1.6.39",
+    "@types/angular-ui-router": "^1.1.40",
+    "@types/node": "^8.0.52",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
     "dotenv": "^5.0.1",
@@ -33,7 +36,16 @@
     "webpack-dev-server": "^2.11.2",
     "uglifyjs-webpack-plugin": "^1.2.3",
     "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "copy-webpack-plugin": "^4.2.0",
+    "favicons-webpack-plugin": "^0.0.7",
+    "babel-loader": "^7.1.2",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "awesome-typescript-loader": "^3.3.0",
+    "typescript": "^2.6.1",
+    "babel-preset-env": "^1.6.1"
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.15",
