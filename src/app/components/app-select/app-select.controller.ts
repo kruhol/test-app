@@ -1,4 +1,4 @@
-import {IComponentController} from 'angular';
+import { IComponentController } from 'angular';
 import IForm from '../../interfaces/form.interface';
 
 class AppSelectComponentController implements IComponentController {

@@ -1,4 +1,4 @@
-import {IComponentOptions} from 'angular';
+import { IComponentOptions } from 'angular';
 import SelectFormsComponentController from './select-forms.controller';
 
 const template = require('./select-forms.html');

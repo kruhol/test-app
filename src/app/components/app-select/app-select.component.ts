@@ -1,4 +1,4 @@
-import {IComponentOptions} from 'angular';
+import { IComponentOptions } from 'angular';
 import AppSelectComponentController from './app-select.controller';
 
 const template = require('./app-select.html');

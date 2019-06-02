@@ -31,5 +31,5 @@
 
 .test-dropdown div[disabled],
 .test-dropdown button[disabled] {
-    background-color: rgb(221, 221, 221);;
+    background-color: rgb(221, 221, 221);
 }

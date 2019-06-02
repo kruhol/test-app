@@ -4,8 +4,7 @@ import {IHttpService, IModule} from 'angular';
 class FormsService {
     public static $inject: string[] = ['$http'];
 
-    constructor(private $http: IHttpService) {
-    }
+    constructor(private $http: IHttpService) {}
 
     public async getForms() {
         const rates = await this.$http.get('/availableforms.json');
