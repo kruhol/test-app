@@ -10,7 +10,8 @@
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
         "types": [
-            "angular"
+            "angular",
+            "jasmine"
         ],
         "allowJs": true
     },

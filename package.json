@@ -15,12 +15,13 @@
     "scripts": {
         "start": "webpack-dev-server --open --hot",
         "build": "webpack",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "karma start karma.config.js"
     },
     "devDependencies": {
         "@types/angular": "^1.6.39",
         "@types/angular-ui-router": "^1.1.40",
         "@types/node": "^8.0.52",
+        "@types/jasmine": "^3.3.13",
         "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^0.28.10",
         "dotenv": "^5.0.1",
@@ -45,7 +46,19 @@
         "tslint-loader": "^3.5.3",
         "awesome-typescript-loader": "^3.3.0",
         "typescript": "^2.6.1",
-        "babel-preset-env": "^1.6.1"
+        "babel-preset-env": "^1.6.1",
+        "istanbul-instrumenter-loader": "^3.0.1",
+        "jasmine-core": "^3.1.0",
+        "karma": "^2.0.2",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-coverage": "^1.1.2",
+        "karma-jasmine": "^1.1.2",
+        "karma-phantomjs-launcher": "^1.0.4",
+        "karma-sourcemap-loader": "^0.3.7",
+        "karma-typescript": "^3.0.12",
+        "karma-typescript-es6-transform": "^1.0.4",
+        "karma-webpack": "^3.0.0",
+        "ts-loader": "^3.5.0"
     },
     "dependencies": {
         "@uirouter/angularjs": "^1.0.15",
