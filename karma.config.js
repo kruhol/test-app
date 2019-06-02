@@ -4,10 +4,11 @@ module.exports = function (config) {
     config.set({
         basePath: '',
         frameworks: ['jasmine'],
-        files: ['tests/*.spec.ts'],
+        files: ['tests/*.spec.ts', 'src/*.ts'],
         mime: { 'text/x-typescript': ['ts','tsx'] },
         preprocessors: {
             'tests/*.spec.ts': ['webpack', 'sourcemap'],
+            'src/*.ts': ['webpack', 'sourcemap'],
         },
         webpack: {
             resolve: {
@@ -15,7 +16,29 @@ module.exports = function (config) {
             },
             module: {
                 rules: [
-                    {test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/}
+                    {
+                        test: /\.tsx?$/,
+                        loader: 'ts-loader',
+                        exclude: /node_modules/
+                    },
+                    {
+                        test: /\.(html)$/,
+                        use: {
+                            loader: 'html-loader',
+                            options: {
+                                minimize: false
+                            }
+                        }
+                    },
+                    {
+                        test: /\.css$/,
+                        use: [
+                            'style-loader',
+                            {
+                                loader: 'css-loader'
+                            }
+                        ]
+                    }
                 ]
             },
             stats: {
@@ -26,8 +49,8 @@ module.exports = function (config) {
             },
             plugins: [
                 new webpack.SourceMapDevToolPlugin({
-                    filename: null, // if no value is provided the sourcemap is inlined
-                    test: /\.(ts|js)($|\?)/i, // process .js and .ts files only
+                    filename: null,
+                    test: /\.(ts|js)($|\?)/i,
                     exclude: [ /node_modules/ ]
                 })
             ]
@@ -40,5 +63,5 @@ module.exports = function (config) {
         browsers: ['Chrome'],
         singleRun: false,
         concurrency: Infinity
-    })
-}
+    });
+};

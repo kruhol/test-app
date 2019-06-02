@@ -1,1 +1,1 @@
-declare function require(path: string): string;
+// declare function require(path: string): string;

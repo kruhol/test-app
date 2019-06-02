@@ -11,7 +11,8 @@
         "experimentalDecorators": true,
         "types": [
             "angular",
-            "jasmine"
+            "jasmine",
+            "node"
         ],
         "allowJs": true
     },

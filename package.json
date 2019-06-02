@@ -22,6 +22,7 @@
         "@types/angular-ui-router": "^1.1.40",
         "@types/node": "^8.0.52",
         "@types/jasmine": "^3.3.13",
+        "@types/angular-mocks": "^1.5.10",
         "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^0.28.10",
         "dotenv": "^5.0.1",
@@ -58,7 +59,8 @@
         "karma-typescript": "^3.0.12",
         "karma-typescript-es6-transform": "^1.0.4",
         "karma-webpack": "^3.0.0",
-        "ts-loader": "^3.5.0"
+        "ts-loader": "^3.5.0",
+        "angular-mocks": "^1.6.9"
     },
     "dependencies": {
         "@uirouter/angularjs": "^1.0.15",

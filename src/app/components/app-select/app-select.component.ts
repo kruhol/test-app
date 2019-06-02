@@ -14,8 +14,8 @@ class AppSelectComponent implements IComponentOptions {
             selectedItem: '<',
             isUsed: '<?',
             forms: '<',
-            addItem: '&',
-            removeItem: '&'
+            addItem: '&?',
+            removeItem: '&?'
         };
 
         this.controller = AppSelectComponentController;

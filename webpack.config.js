@@ -33,9 +33,9 @@ module.exports = () => {
                         'style-loader',
                         {
                         loader: 'css-loader',
-                        options: {
-                            minify: isProdBuild
-                        }
+                            options: {
+                                minify: isProdBuild
+                            }
                         }
                     ]
                 },
